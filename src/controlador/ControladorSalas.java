@@ -64,10 +64,7 @@ import javax.mail.util.ByteArrayDataSource;
 import modelo.claseFacturado;
 import modelo.claseSala;
 import modelo.conectarBD;
-import net.sourceforge.barbecue.Barcode;
-import net.sourceforge.barbecue.BarcodeException;
-import net.sourceforge.barbecue.BarcodeFactory;
-import net.sourceforge.barbecue.BarcodeImageHandler;
+
 
 /**
  * FXML Controller class
@@ -262,68 +259,7 @@ conectarBD cnx=new conectarBD();
     } catch (IOException ex) {
         Logger.getLogger(ControladorSalas.class.getName()).log(Level.SEVERE, null, ex);
     }
-  //EDIT start
- 
-  //EDIT end
-
-          
-      /*  OutputStream file=null;
-    try {
-        System.out.println("imprimir tick");
-        String cadenaFile=Sesion.replaceAll("-", "_").replaceFirst(":", "_");
-        file = new FileOutputStream(new File("C:\\Users\\David\\Desktop\\"+cadenaFile+"_"+filas+"_"+columnas+".pdf"));
-        Document document = new Document();
-         document.open();
-        PdfWriter pdfWriter = PdfWriter.getInstance(document, file);
-       
-        PdfContentByte pdfContentByte = pdfWriter.getDirectContent();
-       // PdfWriter.getInstance(document, file);
-       // document.open();
-        String cadenaFila="";
-        String cadenaCol="";
-        String cadenaSala="";
-        if (sala<9) cadenaSala="0"+sala;
-        if (filas<9) cadenaFila="0"+filas;
-        if (columnas<9) cadenaCol="0"+columnas;
-        String cadena=Sesion+cadenaSala+cadenaFila+cadenaCol;
-        BarcodeQRCode barcodeQrcode = new BarcodeQRCode(cadena, 1, 1, null);
-        Image qrcodeImage = barcodeQrcode.getImage();
-        //      qrcodeImage.setAbsolutePosition(50, 50);
-        qrcodeImage.scalePercent(300);
-        document.add(qrcodeImage);
-        document.add(new Paragraph("sala: "+sala));
-        document.add(new Paragraph("Sesion: "+Sesion));
-        document.add(new Paragraph("Fila: "+filas));
-        document.add(new Paragraph("Columna: "+columnas));
-        document.add(new Paragraph(new Date().toString()));
-        //String nombreFichero="C:\\Users\\David\\Desktop\\"+cadenaFile+"_"+filas+"_"+columnas+".pdf";
-        //   File ficheroPDF=new File(nombreFichero);
-        
-        //    Desktop.getDesktop().open(ficheroPDF);
-        //enviar_correo(nombreFichero);
-        
-        
-        document.close();
-        file.close();
-    } catch (FileNotFoundException ex) {
-        Logger.getLogger(ControladorSalas.class.getName()).log(Level.SEVERE, null, ex);
-    } catch (DocumentException ex) {
-        Logger.getLogger(ControladorSalas.class.getName()).log(Level.SEVERE, null, ex);
-    } catch (IOException ex) {
-        Logger.getLogger(ControladorSalas.class.getName()).log(Level.SEVERE, null, ex);
-    } finally {
-        try {
-            file.close();
-        } catch (IOException ex) {
-            Logger.getLogger(ControladorSalas.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
-          */
-            
-            
-    
-            
-        }
          
         
     
@@ -333,8 +269,8 @@ conectarBD cnx=new conectarBD();
 
         Properties props = System.getProperties();
         props.put("mail.smtp.host", "smtp.gmail.com");  //El servidor SMTP de Google
-        props.put("mail.smtp.user", "jaliyodiaz96@gmail.com");//mi correo
-        props.put("mail.smtp.clave", "gmail de jalo5");    //La clave de la cuenta
+        props.put("mail.smtp.user", "example@gmail.com");//mi correo
+        props.put("mail.smtp.clave", "email password");    //La clave de la cuenta
         props.put("mail.smtp.auth", "true");    //Usar autenticación mediante usuario y clave
         props.put("mail.smtp.starttls.enable", "true"); //Para conectar de manera segura al servidor SMTP
         props.put("mail.smtp.port", "587"); //El puerto SMTP seguro de Google

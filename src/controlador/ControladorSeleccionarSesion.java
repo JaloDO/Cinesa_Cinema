@@ -120,8 +120,6 @@ public String titulo;
         Scene scene = new Scene(root);
         ventana.setScene(scene);
        
-        //  controlador2.setCnx(cnx);
-        //  controlador2.setIdPelicula(tit);
           
 
     
