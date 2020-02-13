@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ac" onContextMenuRequested="#gestionarMenu" onKeyPressed="#gestionarEscape" onScroll="#verGestion" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorMenuPeliculas">
+   <children>
+      <AnchorPane id="acGestion" fx:id="acGestion" layoutX="6.0" layoutY="8.0" prefHeight="66.0" prefWidth="320.0" visible="false">
+         <children>
+            <Label fx:id="lbBandera" prefHeight="66.0" prefWidth="114.0" />
+            <TextField fx:id="txtLectorQr" editable="false" layoutX="121.0" layoutY="21.0" onInputMethodTextChanged="#entradaDatos" onKeyTyped="#KeyType_barcode" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
